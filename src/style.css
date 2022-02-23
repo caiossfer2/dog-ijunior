@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: #E5E5E5;  */
+    background-color: #F4FFFD; 
+} 
+
+.nav-titulo{
+    background-color:#777DA7;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-family: 'Libre Baskerville', serif;
+    padding:34px 379px 34px 379px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-titulo h1{
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+}
+
+.sub-title{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin-top: 37px;
+    margin-bottom: 38px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+.img-cachorro{
+    margin-top: 0px;
+    width: 256px;
+    height: 256px;
+    border-radius: 16px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+.material-icons-outlined{
+    color:#F9DC5C;
+    font-size: 72px;
+    margin-left: 50%; 
+    margin-right: 50%;
+   
+    text-shadow: 1px 1px black, -1px -1px #444;
+}
