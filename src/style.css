@@ -18,20 +18,37 @@ body{
     text-align: center;
     display: flex;
     font-family: 'Libre Baskerville', serif;
-    padding:34px 379px 34px 379px; 
+    padding:34px 0;  
+    text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.material-icons-outlined{
+    color:#F9DC5C;
+    font-size: 72px;
+}
+
+.pata1{
+    position: absolute;
+    top: 25px;
+    left: 28px;
+}
+
+.pata2{
+    position: absolute;
+    top: 25px;
+    right: 28px;
 }
 
 .nav-titulo h1{
     justify-content: center;
     font-size: 48px;
-    font-weight: 400;
     color: white;
+ 
 }
 
 .sub-title{
     font-size: 16px;
-    font-weight: 400;
     font-family: 'Love Ya Like A Sister', cursive;
     margin-top: 37px;
     margin-bottom: 38px;
@@ -40,20 +57,117 @@ body{
     padding-bottom: 2px;
 }
 
-.img-cachorro{
+.img-cachorro{ 
     margin-top: 0px;
     width: 256px;
     height: 256px;
     border-radius: 16px;
-    margin-right: 32px;
+    margin-right: 16px; 
+    margin-left: 16px; 
     margin-bottom: 32px;
 }
 
-.material-icons-outlined{
-    color:#F9DC5C;
-    font-size: 72px;
-    margin-left: 50%; 
-    margin-right: 50%;
-   
-    text-shadow: 1px 1px black, -1px -1px #444;
+.div-pai{
+    text-align: center;
+}
+
+
+.footer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #ED254E;
+}
+
+.button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+}
+
+@media screen and (max-width: 780px){
+    
+     .nav-titulo{
+        padding: 28px 0;  
+    } 
+
+    .nav-titulo h1{
+        font-size: 24px;
+    } 
+
+    .material-icons-outlined{
+        font-size: 40px;
+    }
+
+    .pata1{
+        top: 22px;
+    }
+    
+    .pata2{
+        top: 22px;
+    }
+
+    .sub-title{
+        font-size: 12px;
+    } 
+    
+    .img-cachorro{ 
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        margin-right: 8px; 
+        margin-left: 8px; 
+        margin-bottom: 16px; 
+     }  
+
+     .footer{
+        font-size: 16px;
+    }
+     
+}
+
+@media screen and (max-width: 480px){
+    .nav-titulo{
+        padding: 28px 0;  
+    } 
+
+    .nav-titulo h1{
+        font-size: 21px;
+    } 
+
+    .material-icons-outlined{
+        font-size: 30px;
+    }
+
+    .pata1{
+        top: 25px;
+        left: 15px;
+    }
+    
+    .pata2{
+        top: 25px;
+        right: 15px;
+    }
+
+    .sub-title{
+        font-size: 10px;
+    } 
+    
+    .img-cachorro{ 
+        width: 280px;
+        height: 280px;
+        border-radius: 8px;
+        margin-right: 4px; 
+        margin-left: 4px; 
+        margin-bottom: 16px; 
+     }  
+
+     .footer{
+        font-size: 15px;    
+    }
+     
 }

@@ -6,10 +6,10 @@ import './style.css';
 function Nav(props){
   return(
     <nav className="nav-titulo">
-      <i className="material-icons-outlined">pets</i>
+      <span className="material-icons-outlined pata1">pets</span>
       <h1>api.GET(/FRIENDS)</h1>
-      {/* <img className="img-patinha" src="patinha.png" alt="internet ruim? :/"></img> */}
-      <span className="material-icons-outlined">pets</span>
+      {/* <img className="img-patinha" src="patinha.png" alt="Falha ao carregar imagem"></img> */}
+      <span className="material-icons-outlined pata2">pets</span>
     
     </nav>
   )
@@ -26,18 +26,36 @@ function Body(){
 function ImgCachorro(props){
   
   return(
-    <img className="img-cachorro" src={props.src} alt="internet ruim? :/" />
+    <img className="img-cachorro" src={props.src} alt="Falha ao carregar imagem." />
   );
 }
 
 
-function  App() {
+function Mostrar(props){
+
+  function alterarQuantidade(){
+    let temp = props.quantidade;
+    temp += 8;
+    props.setQuantidade(temp);
+    console.log(props.quantidade);
+  }
+
+  return(
+    <div>
+        <p className='footer'>Mostrar mais</p>
+        <img className='button' onClick={() => alterarQuantidade()} src="seta.png" alt="Falha ao carregar imagem."/>
+    </div>
+  ); 
+}
+
+function App() {
 
   const [arrayUrls, setArrayUrls] = useState([]);
+  const [quantidade, setQuantidade]  = useState(8);
 
     const token = "d062ac8e-fc40-44fe-8ac2-69f042a5d9e4";
     useEffect(() =>{
-      axios.get('https://api.thedogapi.com/v1/images/search?size=med&limit=20', {
+      axios.get('https://api.thedogapi.com/v1/images/search?size=med&limit=100', {
         headers: {
           "api_key" : `${token}`
         }
@@ -50,16 +68,21 @@ function  App() {
         console.error(error);
       })
     }, []);
-
+  
 
   return (
     <div>
       <Nav/>
       <Body/>
-      {arrayUrls.map(function(obj, i){
-        return <ImgCachorro src={obj.url} key={i}/>
-      })}
-      
+      <div className='div-pai'>
+          {arrayUrls.map(function(obj, i){
+            if(i < quantidade){
+              return <ImgCachorro src={obj.url} key={i}/>
+            }
+            return <div  key={i}/>;
+          })}
+      </div>
+      <Mostrar setQuantidade={setQuantidade}  quantidade={quantidade}/>  
     </div>
   );
 }
